@@ -9,9 +9,9 @@ const correctAnswersContainer = document.getElementById("correct-answers-contain
 const questionElement = document.getElementById("question")
 const answerButtonsElement = document.getElementById("answer-buttons")
 let scoreCount = document.getElementById('score-count')
+let questionCount = document.getElementById("question-count")
 let score = 0
-let shuffledQuestions, currentQuestionIndex
-
+let shuffledQuestions, currentQuestionIndex, questionNumber
 // ------------------------------------------------------------------
 // Event Listeners
 // ------------------------------------------------------------------
@@ -19,6 +19,8 @@ let shuffledQuestions, currentQuestionIndex
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++
+  questionNumber++
+  questionCount.innerHTML = questionNumber 
   setNextQuestion()
 })
 
@@ -31,7 +33,9 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   score = 0
+  questionNumber = 1
   scoreCount.innerHTML = score
+  questionCount.innerHTML = questionNumber
   correctAnswersContainer.classList.remove("hide")
   questionContainerElement.classList.remove("hide")
   setNextQuestion()
