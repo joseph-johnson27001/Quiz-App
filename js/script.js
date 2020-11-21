@@ -8,20 +8,30 @@ const questionContainerElement = document.getElementById("question-container")
 const correctAnswersContainer = document.getElementById("correct-answers-container")
 const questionElement = document.getElementById("question")
 const answerButtonsElement = document.getElementById("answer-buttons")
+const quizHeading = document.getElementById("quiz-heading")
+const topicContainer = document.getElementById("topic-container")
+const questionAmountContainer = document.getElementById("number-of-questions-container")
 let scoreCount = document.getElementById('score-count')
 let questionCount = document.getElementById("question-count")
-let score = 0
-let shuffledQuestions, currentQuestionIndex, questionNumber
+let shuffledQuestions, currentQuestionIndex, questionNumber, score
+
 // ------------------------------------------------------------------
 // Event Listeners
 // ------------------------------------------------------------------
 
 startButton.addEventListener('click', startGame)
+
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++
   questionNumber++
-  questionCount.innerHTML = questionNumber 
+  questionCount.innerHTML = questionNumber
   setNextQuestion()
+// Code for specifying the number of questions - currently set at 5
+//     if (questionNumber == 5) {
+//       startButton.innerText = "Restart"
+//       startButton.classList.remove("hide")
+//       nextButton.classList.add("hide")
+//     }
 })
 
 // ------------------------------------------------------------------
@@ -30,6 +40,9 @@ nextButton.addEventListener("click", () => {
 
 function startGame() {
   startButton.classList.add("hide")
+  quizHeading.classList.add("hide")
+  topicContainer.classList.add("hide")
+  questionAmountContainer.classList.add("hide")
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   score = 0
@@ -126,7 +139,7 @@ const questions = [
     ]
   },
   {
-    question: "What year was the fall of Constantinope?",
+    question: "What year was the fall of Constantinople?",
     answers: [
       { text: "1213", correct: false },
       { text: "808", correct: false },
@@ -159,6 +172,51 @@ const questions = [
       { text: "18", correct: false },
       { text: "20", correct: true },
       { text: "22", correct: false }
+    ]
+  },
+  {
+    question: "In which U.S. state is the San Andreas Fault?",
+    answers: [
+      { text: "Nevada", correct: false },
+      { text: "New Mexico", correct: false },
+      { text: "Arizona", correct: false },
+      { text: "California", correct: true }
+    ]
+  },
+  {
+    question: "What is the main alcohol used in a Mojito?",
+    answers: [
+      { text: "Whiskey", correct: false },
+      { text: "Gin", correct: false },
+      { text: "Vodka", correct: false },
+      { text: "White Rum", correct: true }
+    ]
+  },
+  {
+    question: "Vilnius is the capital of which country?",
+    answers: [
+      { text: "Latvia", correct: false },
+      { text: "Belarus", correct: false },
+      { text: "Lithuania", correct: true },
+      { text: "Estonia", correct: false }
+    ]
+  },
+  {
+    question: "David Gilmour is known for being a gutiarist in which band?",
+    answers: [
+      { text: "Pink Floyd", correct: true },
+      { text: "Metalica", correct: false },
+      { text: "The Beatles", correct: false },
+      { text: "Thin Lizzy", correct: false }
+    ]
+  },
+  {
+    question: "Who was the main actress in the original Alien movie franchise?",
+    answers: [
+      { text: "Jodie Foster", correct: false },
+      { text: "Sigourney Weaver", correct: true },
+      { text: "Winona Ryder", correct: false },
+      { text: "Sharon Stone", correct: false }
     ]
   },
 ]
