@@ -1,7 +1,8 @@
 // ------------------------------------------------------------------
 // VARIABLES
 // ------------------------------------------------------------------
-
+const topicContainer = document.getElementById("topic-container")
+const topicButtons = document.getElementsByClassName("btn-topic")
 const startButton = document.getElementById("start-btn")
 const nextButton = document.getElementById("next-btn")
 const questionContainerElement = document.getElementById("question-container")
@@ -9,7 +10,6 @@ const correctAnswersContainer = document.getElementById("correct-answers-contain
 const questionElement = document.getElementById("question")
 const answerButtonsElement = document.getElementById("answer-buttons")
 const quizHeading = document.getElementById("quiz-heading")
-const topicContainer = document.getElementById("topic-container")
 const questionAmountContainer = document.getElementById("number-of-questions-container")
 let scoreCount = document.getElementById('score-count')
 let questionCount = document.getElementById("question-count")
@@ -38,11 +38,24 @@ nextButton.addEventListener("click", () => {
 // FUNCTIONS
 // ------------------------------------------------------------------
 
+document.querySelectorAll('button').forEach(function(e){
+  e.addEventListener('click', setColor)
+})
+
+function setColor() {
+  if(this.classList.contains("correct")) {
+    this.classList.remove("correct")
+  }
+   else {
+     this.classList.add("correct")
+   }
+ }
+
 function startGame() {
   startButton.classList.add("hide")
   quizHeading.classList.add("hide")
   topicContainer.classList.add("hide")
-  questionAmountContainer.classList.add("hide")
+  // questionAmountContainer.classList.add("hide")
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   score = 0
@@ -84,14 +97,14 @@ function resetState() {
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
+  if (correct && !selectedButton.classList.contains("correct")) {
+    score++
+    scoreCount.innerHTML = score
+  }
   setStatusClass(document.body, correct)
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
-  if (selectedButton.dataset.correct) {
-    score++
-    scoreCount.innerHTML = score
-  }
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
       nextButton.classList.remove("hide")
   } else {
