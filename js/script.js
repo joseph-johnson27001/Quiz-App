@@ -178,7 +178,70 @@ const historyQuestions = [
       { text: "Third", correct: true },
       { text: "Fourth", correct: false }
     ]
-  }
+  },
+  {
+    question: "Which Queen had the shortest reign of Henry VIII’s six wives?",
+    answers: [
+      { text: "Anne of Cleves", correct: true },
+      { text: "Catherine Howard", correct: false },
+      { text: "Anne Boleyn", correct: false },
+      { text: "Catherine of Aragon", correct: false }
+    ]
+  },
+  {
+    question: "Where was Napoleon Bonaparte Born?",
+    answers: [
+      { text: "Paris", correct: false },
+      { text: "Bordeaux", correct: false },
+      { text: "Lyon", correct: false },
+      { text: "Corsica", correct: true }
+    ]
+  },
+  {
+    question: "In 1066, which English King died, leaving no heir to the throne?",
+    answers: [
+      { text: "William I", correct: false },
+      { text: "Edward the Confessor", correct: true },
+      { text: "William II", correct: false },
+      { text: "Henry I", correct: false }
+    ]
+  },
+  {
+    question: "Who sent the Spanish Armada to England in 1588?",
+    answers: [
+      { text: "Philip II of Spain", correct: true },
+      { text: "Ferdinand VII of Spain", correct: false },
+      { text: "King Alfonso", correct: false },
+      { text: "El Cid", correct: false }
+    ]
+  },
+  {
+    question: "Which American President was in power during the ‘Black Thursday’ Wall Street crash?",
+    answers: [
+      { text: "Franklin Roosevelt", correct: false },
+      { text: "Woodrow Wilson", correct: false },
+      { text: "Theodore Roosevelt", correct: false },
+      { text: "Herbert Hoover", correct: true }
+    ]
+  },
+  {
+    question: "At what famous French landmark was the document signed which set out the terms of ‘peace’ following the First World War?",
+    answers: [
+      { text: "The Eiffel Tower", correct: false },
+      { text: "The Palace of Versailles", correct: true },
+      { text: "The Louvre", correct: false },
+      { text: "Notre Dame Cathedral", correct: false }
+    ]
+  },
+  {
+    question: "During 1963, in Washington DC, Martin Luther King Jr gave his famous ‘I have a dream’ speech on the steps of which famous landmark?",
+    answers: [
+      { text: "The Lincoln Memorial", correct: true },
+      { text: "The White House", correct: false },
+      { text: "The Capital Building", correct: false },
+      { text: "The Washington Monument", correct: false }
+    ]
+  },
 ]
 
 // ------------------------------------------------------------------
