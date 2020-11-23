@@ -13,8 +13,7 @@ const quizHeading = document.getElementById("quiz-heading")
 const questionAmountContainer = document.getElementById("number-of-questions-container")
 let scoreCount = document.getElementById('score-count')
 let questionCount = document.getElementById("question-count")
-let shuffledQuestions, currentQuestionIndex, questionNumber, score
-let questions = []
+let shuffledQuestions, currentQuestionIndex, questionNumber, score, questions
 
 // ------------------------------------------------------------------
 // Event Listeners
@@ -131,12 +130,18 @@ function clearStatusClass(element) {
 
 function generateQuestionArray() {
   let questionArray = []
-   questions = questionArray.concat(historyQuestions, sportQuestions, foodAndDrinkQuestions, moviesAndTelevisionQuestions,
-     scieneQuestions, geographyQuestions, musicQuestions, generalKnowledgeQuestions)
+   questions = questionArray.concat(historyQuestions,
+     sportQuestions,
+     foodAndDrinkQuestions,
+     moviesAndTelevisionQuestions,
+     scieneQuestions,
+     geographyQuestions,
+     musicQuestions,
+     generalKnowledgeQuestions)
 }
 
 // ------------------------------------------------------------------
-// Questions Array
+// QUESTIONS ARRAY
 // ------------------------------------------------------------------
 
 
