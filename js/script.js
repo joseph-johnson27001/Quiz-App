@@ -331,6 +331,60 @@ const geographyQuestions = [
       { text: "Estonia", correct: false }
     ]
   },
+  {
+    question: "What is the capital of Cambodia?",
+    answers: [
+      { text: "Phnom Penh", correct: true },
+      { text: "Hanoi", correct: false },
+      { text: "Chiang Mai", correct: false },
+      { text: "Vientiane", correct: false }
+    ]
+  },
+  {
+    question: "If you were stood in Busan, which country would you be in?",
+    answers: [
+      { text: "Japan", correct: false },
+      { text: "South Korea", correct: true },
+      { text: "Thailand", correct: false },
+      { text: "Russia", correct: false }
+    ]
+  },
+  {
+    question: "Which is the largest desert in the world?",
+    answers: [
+      { text: "Sahara", correct: false },
+      { text: "Gobi", correct: false },
+      { text: "Mojave", correct: false },
+      { text: "Antarctic", correct: true }
+    ]
+  },
+  {
+    question: "In which city would you find La Sagrada Familia?",
+    answers: [
+      { text: "Rome", correct: false },
+      { text: "Paris", correct: false },
+      { text: "Barcelona", correct: true },
+      { text: "Lisbon", correct: false }
+    ]
+  },
+  {
+    question: "In which country would you find Lake Bled?",
+    answers: [
+      { text: "Slovenia", correct: true },
+      { text: "Czech Republic", correct: false },
+      { text: "Croatia", correct: false },
+      { text: "Greece", correct: false }
+    ]
+  },
+  {
+    question: "What is the currency of Malaysia?",
+    answers: [
+      { text: "Ringet", correct: true },
+      { text: "Baht", correct: false },
+      { text: "Rupee", correct: false },
+      { text: "Yuan", correct: false }
+    ]
+  },
 ]
 
 // ------------------------------------------------------------------
