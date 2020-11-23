@@ -14,6 +14,7 @@ const questionAmountContainer = document.getElementById("number-of-questions-con
 let scoreCount = document.getElementById('score-count')
 let questionCount = document.getElementById("question-count")
 let shuffledQuestions, currentQuestionIndex, questionNumber, score
+let questions = []
 
 // ------------------------------------------------------------------
 // Event Listeners
@@ -52,6 +53,7 @@ function setColor() {
  }
 
 function startGame() {
+  generateQuestionArray()
   startButton.classList.add("hide")
   quizHeading.classList.add("hide")
   topicContainer.classList.add("hide")
@@ -127,30 +129,24 @@ function clearStatusClass(element) {
   element.classList.remove("wrong")
 }
 
+function generateQuestionArray() {
+  let questionArray = []
+   questions = questionArray.concat(historyQuestions, sportQuestions, foodAndDrinkQuestions, moviesAndTelevisionQuestions,
+     scieneQuestions, geographyQuestions, musicQuestions, generalKnowledgeQuestions)
+}
 
 // ------------------------------------------------------------------
 // Questions Array
 // ------------------------------------------------------------------
 
-const questions = [
-  {
-    question: "How many states of America begin with the letter I?",
-    answers: [
-      { text: "4", correct: true },
-      { text: "2", correct: false },
-      { text: "3", correct: false },
-      { text: "5", correct: false }
-    ]
-  },
-  {
-    question: "What is the capital of Brazil?",
-    answers: [
-      { text: "Buenos Aires", correct: false },
-      { text: "Rio De Janeiro", correct: false },
-      { text: "Brasilia", correct: true },
-      { text: "Santiago", correct: false }
-    ]
-  },
+
+// ------------------------------------------------------------------
+// HISTORY QUESTIONS
+// ------------------------------------------------------------------
+
+
+const historyQuestions = [
+
   {
     question: "What year was the fall of Constantinople?",
     answers: [
@@ -177,14 +173,76 @@ const questions = [
       { text: "Third", correct: true },
       { text: "Fourth", correct: false }
     ]
+  }
+]
+
+// ------------------------------------------------------------------
+// SPORT QUESTIONS
+// ------------------------------------------------------------------
+
+const sportQuestions = [
+
+]
+
+// ------------------------------------------------------------------
+// FOOD & DRINK QUESTIONS
+// ------------------------------------------------------------------
+
+const foodAndDrinkQuestions = [
+  {
+    question: "What is the main alcohol used in a Mojito?",
+    answers: [
+      { text: "Whiskey", correct: false },
+      { text: "Gin", correct: false },
+      { text: "Vodka", correct: false },
+      { text: "White Rum", correct: true }
+    ]
+  },
+]
+
+// ------------------------------------------------------------------
+// MOVIES & TELEVISION QUESTIONS
+// ------------------------------------------------------------------
+
+const moviesAndTelevisionQuestions = [
+  {
+    question: "Who was the main actress in the original Alien movie franchise?",
+    answers: [
+      { text: "Jodie Foster", correct: false },
+      { text: "Sigourney Weaver", correct: true },
+      { text: "Winona Ryder", correct: false },
+      { text: "Sharon Stone", correct: false }
+    ]
+  }
+]
+
+// ------------------------------------------------------------------
+// SCIENCE QUESTIONS
+// ------------------------------------------------------------------
+
+const scieneQuestions = []
+
+// ------------------------------------------------------------------
+// GEOGRAPHY QUESTIONS
+// ------------------------------------------------------------------
+
+const geographyQuestions = [
+  {
+    question: "How many states of America begin with the letter I?",
+    answers: [
+      { text: "4", correct: true },
+      { text: "2", correct: false },
+      { text: "3", correct: false },
+      { text: "5", correct: false }
+    ]
   },
   {
-    question: "How many different opening moves can white make in a game of chess?",
+    question: "What is the capital of Brazil?",
     answers: [
-      { text: "16", correct: false },
-      { text: "18", correct: false },
-      { text: "20", correct: true },
-      { text: "22", correct: false }
+      { text: "Buenos Aires", correct: false },
+      { text: "Rio De Janeiro", correct: false },
+      { text: "Brasilia", correct: true },
+      { text: "Santiago", correct: false }
     ]
   },
   {
@@ -197,15 +255,6 @@ const questions = [
     ]
   },
   {
-    question: "What is the main alcohol used in a Mojito?",
-    answers: [
-      { text: "Whiskey", correct: false },
-      { text: "Gin", correct: false },
-      { text: "Vodka", correct: false },
-      { text: "White Rum", correct: true }
-    ]
-  },
-  {
     question: "Vilnius is the capital of which country?",
     answers: [
       { text: "Latvia", correct: false },
@@ -214,6 +263,13 @@ const questions = [
       { text: "Estonia", correct: false }
     ]
   },
+]
+
+// ------------------------------------------------------------------
+// MUSIC QUESTIONS
+// ------------------------------------------------------------------
+
+const musicQuestions = [
   {
     question: "David Gilmour is known for being a gutiarist in which band?",
     answers: [
@@ -223,13 +279,20 @@ const questions = [
       { text: "Thin Lizzy", correct: false }
     ]
   },
+]
+
+// ------------------------------------------------------------------
+// GENERAL KNOWLEDGE QUESTIONS
+// ------------------------------------------------------------------
+
+const generalKnowledgeQuestions = [
   {
-    question: "Who was the main actress in the original Alien movie franchise?",
+    question: "How many different opening moves can white make in a game of chess?",
     answers: [
-      { text: "Jodie Foster", correct: false },
-      { text: "Sigourney Weaver", correct: true },
-      { text: "Winona Ryder", correct: false },
-      { text: "Sharon Stone", correct: false }
+      { text: "16", correct: false },
+      { text: "18", correct: false },
+      { text: "20", correct: true },
+      { text: "22", correct: false }
     ]
   },
 ]
