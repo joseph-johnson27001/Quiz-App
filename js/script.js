@@ -1,18 +1,37 @@
 // ------------------------------------------------------------------
 // VARIABLES
 // ------------------------------------------------------------------
+
+// Button Variables:
 const topicContainer = document.getElementById("topic-container")
 const topicButtons = document.getElementsByClassName("btn-topic")
 const startButton = document.getElementById("start-btn")
 const nextButton = document.getElementById("next-btn")
+const historyButton = document.getElementById("history-button")
+const sportButton = document.getElementById("sport-button")
+const foodAndDrinkButton = document.getElementById("food-and-drink-button")
+const moivesAndTelevisionButton = document.getElementById("movies-and-television-button")
+const scienceButton = document.getElementById("science-button")
+const geographyButton = document.getElementById("geography-button")
+const musicButton = document.getElementById("music-button")
+const generalKnowledgeButton = document.getElementById("general-knowledge-button")
+
+
+// Container Variables:
 const questionContainerElement = document.getElementById("question-container")
 const correctAnswersContainer = document.getElementById("correct-answers-container")
 const questionElement = document.getElementById("question")
 const answerButtonsElement = document.getElementById("answer-buttons")
-const quizHeading = document.getElementById("quiz-heading")
 const questionAmountContainer = document.getElementById("number-of-questions-container")
+
+// Headings Variables:
+const quizHeading = document.getElementById("quiz-heading")
+
+// Count Variables:
 let scoreCount = document.getElementById('score-count')
 let questionCount = document.getElementById("question-count")
+
+//Undefined Variables:
 let shuffledQuestions, currentQuestionIndex, questionNumber, score, questions
 
 // ------------------------------------------------------------------
@@ -128,17 +147,58 @@ function clearStatusClass(element) {
   element.classList.remove("wrong")
 }
 
+
+// FUNCTION TO GENERATE QUESTIONLIST OUT OF USERS SELECTED TOPICS
+
 function generateQuestionArray() {
-  let questionArray = []
-   questions = questionArray.concat(historyQuestions,
-     sportQuestions,
-     foodAndDrinkQuestions,
-     moviesAndTelevisionQuestions,
-     scieneQuestions,
-     geographyQuestions,
-     musicQuestions,
-     generalKnowledgeQuestions)
+  let chosenQuestionsArray = []
+  let questionsArray = []
+   if(historyButton.classList.contains("correct")) {
+     chosenQuestionsArray.push(historyQuestions)
+   }
+   if(sportButton.classList.contains("correct")) {
+     chosenQuestionsArray.push(sportQuestions)
+   }
+   if(foodAndDrinkButton.classList.contains("correct")) {
+     chosenQuestionsArray.push(foodAndDrinkQuestions)
+   }
+   if(moivesAndTelevisionButton.classList.contains("correct")) {
+     chosenQuestionsArray.push(moviesAndTelevisionQuestions)
+   }
+   if(scienceButton.classList.contains("correct")) {
+     chosenQuestionsArray.push(scienceQuestions)
+   }
+   if(geographyButton.classList.contains("correct")) {
+     chosenQuestionsArray.push(geographyQuestions)
+   }
+   if(musicButton.classList.contains("correct")) {
+     chosenQuestionsArray.push(musicQuestions)
+   }
+   if(generalKnowledgeButton.classList.contains("correct")) {
+     chosenQuestionsArray.push(generalKnowledgeQuestions)
+   }
+
+for (let i = 0; i < chosenQuestionsArray.length; i++) {
+  for (let j = 0; j < chosenQuestionsArray[i].length; j++) {
+    questionsArray.push(chosenQuestionsArray[i][j])
+  }
+  questions = questionsArray
 }
+
+
+
+
+}
+
+
+
+// METHOD FOR LETTING USERS SELECT TOPICS:
+//
+//
+// if sport button classList contains correct then add questionArray.concat(sportQuestions)
+// if histiry button classList contains.....setColor
+// questions = questionArray
+
 
 // ------------------------------------------------------------------
 // QUESTIONS ARRAY
@@ -257,6 +317,7 @@ const sportQuestions = [
 // ------------------------------------------------------------------
 
 const foodAndDrinkQuestions = [
+
   {
     question: "What is the main alcohol used in a Mojito?",
     answers: [
@@ -273,6 +334,7 @@ const foodAndDrinkQuestions = [
 // ------------------------------------------------------------------
 
 const moviesAndTelevisionQuestions = [
+
   {
     question: "Who was the main actress in the original Alien movie franchise?",
     answers: [
@@ -288,13 +350,14 @@ const moviesAndTelevisionQuestions = [
 // SCIENCE QUESTIONS
 // ------------------------------------------------------------------
 
-const scieneQuestions = []
+const scienceQuestions = []
 
 // ------------------------------------------------------------------
 // GEOGRAPHY QUESTIONS
 // ------------------------------------------------------------------
 
 const geographyQuestions = [
+
   {
     question: "How many states of America begin with the letter I?",
     answers: [
@@ -392,6 +455,7 @@ const geographyQuestions = [
 // ------------------------------------------------------------------
 
 const musicQuestions = [
+
   {
     question: "David Gilmour is known for being a gutiarist in which band?",
     answers: [
@@ -408,6 +472,7 @@ const musicQuestions = [
 // ------------------------------------------------------------------
 
 const generalKnowledgeQuestions = [
+
   {
     question: "How many different opening moves can white make in a game of chess?",
     answers: [
