@@ -470,7 +470,7 @@ const foodAndDrinkQuestions = [
     ]
   },
   {
-    question: "In which country will you find wine-growing region the Yarra Valley?",
+    question: "In which country will you find the wine-growing region the Yarra Valley?",
     answers: [
       { text: "South Africa", correct: false },
       { text: "Australia", correct: true },
@@ -522,7 +522,89 @@ const moviesAndTelevisionQuestions = [
       { text: "Winona Ryder", correct: false },
       { text: "Sharon Stone", correct: false }
     ]
-  }
+  },
+  {
+    question: "In Harry Potter, what is the effect of the Obliviate spell?",
+    answers: [
+      { text: "Freezes Enemies", correct: false },
+      { text: "Removes Memories", correct: true },
+      { text: "Makes Something Float", correct: false },
+      { text: "Creates A Bright Light", correct: false }
+    ]
+  },
+  {
+    question: "In which year was Daniel Craig’s first Bond film released?",
+    answers: [
+      { text: "2006", correct: true },
+      { text: "2010", correct: false },
+      { text: "2012", correct: false },
+      { text: "2015", correct: false }
+    ]
+  },
+  {
+    question: "How many episodes of Game of Thrones are there?",
+    answers: [
+      { text: "46", correct: false },
+      { text: "73", correct: true },
+      { text: "92", correct: false },
+      { text: "110", correct: false }
+    ]
+  },
+  {
+    question: "How many movies have Leonardo Di Caprio and Kate Winslet starred in together?",
+    answers: [
+      { text: "1", correct: false },
+      { text: "2", correct: true },
+      { text: "3", correct: false },
+      { text: "4", correct: false }
+    ]
+  },
+  {
+    question: "Who directed Titanic, Avatar and The Terminator?",
+    answers: [
+      { text: "Peter Jackson", correct: false },
+      { text: "Ridley Scott", correct: false },
+      { text: "Steven Spielberg", correct: false },
+      { text: "James Cameron", correct: true }
+    ]
+  },
+  {
+    question: "Who voiced Shrek?",
+    answers: [
+      { text: "Robert Carlyle", correct: false },
+      { text: "Mike Myers", correct: true },
+      { text: "Ewan McGregor", correct: false },
+      { text: "Billy Connolly", correct: false }
+    ]
+  },
+  {
+    question: "In 'The Simpsons' what does Bart always do during the opening credits?",
+    answers: [
+      { text: "Write on the school blackboard", correct: true },
+      { text: "Drive Marge's car", correct: false },
+      { text: "Play a prank on Homer", correct: false },
+      { text: "Eat a Krusty burger", correct: false }
+    ]
+  },
+  {
+    question: "In the TV show 'Friends', what is Chandler's middle name?",
+    answers: [
+      { text: "Mildred", correct: false },
+      { text: "Maybell", correct: false },
+      { text: "Michael", correct: false },
+      { text: "Muriel", correct: true }
+    ]
+  },
+  {
+    question: "In the Matrix, what colour pill does Neo take?",
+    answers: [
+      { text: "Blue", correct: false },
+      { text: "Red", correct: true },
+      { text: "Green", correct: false },
+      { text: "Purple", correct: false }
+    ]
+  },
+
 ]
 
 // ------------------------------------------------------------------
