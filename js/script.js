@@ -7,6 +7,7 @@ const topicContainer = document.getElementById("topic-container")
 const topicButtons = document.getElementsByClassName("btn-topic")
 const startButton = document.getElementById("start-btn")
 const nextButton = document.getElementById("next-btn")
+const playAgainButton = document.getElementById("play-again-btn")
 const historyButton = document.getElementById("history-button")
 const sportButton = document.getElementById("sport-button")
 const foodAndDrinkButton = document.getElementById("food-and-drink-button")
@@ -23,6 +24,7 @@ const correctAnswersContainer = document.getElementById("correct-answers-contain
 const questionElement = document.getElementById("question")
 const answerButtonsElement = document.getElementById("answer-buttons")
 const questionAmountContainer = document.getElementById("number-of-questions-container")
+const resultContainer = document.getElementById("result-container")
 
 // Headings Variables:
 const quizHeading = document.getElementById("quiz-heading")
@@ -30,7 +32,8 @@ const quizHeading = document.getElementById("quiz-heading")
 // Count Variables:
 let scoreCount = document.getElementById('score-count')
 let questionCount = document.getElementById("question-count")
-
+let resultScoreCount = document.getElementById("result-score-count")
+let resultQuestionCount = document.getElementById("result-question-count")
 //Undefined Variables:
 let shuffledQuestions, currentQuestionIndex, questionNumber, score, questions
 
@@ -45,13 +48,9 @@ nextButton.addEventListener("click", () => {
   questionNumber++
   questionCount.innerHTML = questionNumber
   setNextQuestion()
-// Code for specifying the number of questions - currently set at 5
-//     if (questionNumber == 5) {
-//       startButton.innerText = "Restart"
-//       startButton.classList.remove("hide")
-//       nextButton.classList.add("hide")
-//     }
 })
+
+playAgainButton.addEventListener("click", reloadGame)
 
 // ------------------------------------------------------------------
 // FUNCTIONS
@@ -72,6 +71,9 @@ function setColor() {
 
 function startGame() {
   generateQuestionArray()
+  if(!questions) {
+      return
+  }
   startButton.classList.add("hide")
   quizHeading.classList.add("hide")
   topicContainer.classList.add("hide")
@@ -128,8 +130,12 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
       nextButton.classList.remove("hide")
   } else {
-    startButton.innerText = "Restart"
-    startButton.classList.remove("hide")
+    playAgainButton.classList.remove("hide")
+    resultContainer.classList.remove("hide");
+    resultScoreCount.innerHTML = score
+    resultQuestionCount.innerHTML = questionNumber
+    questionContainerElement.classList.add("hide");
+    correctAnswersContainer.classList.add("hide")
   }
 }
 
@@ -177,17 +183,28 @@ function generateQuestionArray() {
    if(generalKnowledgeButton.classList.contains("correct")) {
      chosenQuestionsArray.push(generalKnowledgeQuestions)
    }
-
-for (let i = 0; i < chosenQuestionsArray.length; i++) {
-  for (let j = 0; j < chosenQuestionsArray[i].length; j++) {
-    questionsArray.push(chosenQuestionsArray[i][j])
+  for (let i = 0; i < chosenQuestionsArray.length; i++) {
+    for (let j = 0; j < chosenQuestionsArray[i].length; j++) {
+      questionsArray.push(chosenQuestionsArray[i][j])
+    }
+    questions = questionsArray
   }
-  questions = questionsArray
 }
 
+// Reload begining state FUNCTION
 
-
-
+function reloadGame() {
+  startButton.classList.remove("hide", "correct")
+  quizHeading.classList.remove("hide")
+  playAgainButton.classList.add("hide")
+  topicContainer.classList.remove("hide")
+  correctAnswersContainer.classList.add("hide")
+  questionContainerElement.classList.add("hide")
+  for(let i = 0; i < topicButtons.length; i++) {
+    topicButtons[i].classList.remove("correct")
+  }
+  document.body.classList.remove("correct", "wrong")
+    resultContainer.classList.add("hide");
 }
 
 
