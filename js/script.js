@@ -34,6 +34,7 @@ let scoreCount = document.getElementById('score-count')
 let questionCount = document.getElementById("question-count")
 let resultScoreCount = document.getElementById("result-score-count")
 let resultQuestionCount = document.getElementById("result-question-count")
+
 //Undefined Variables:
 let shuffledQuestions, currentQuestionIndex, questionNumber, score, questions
 
@@ -77,7 +78,6 @@ function startGame() {
   startButton.classList.add("hide")
   quizHeading.classList.add("hide")
   topicContainer.classList.add("hide")
-  // questionAmountContainer.classList.add("hide")
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   score = 0
@@ -128,7 +128,7 @@ function selectAnswer(e) {
     setStatusClass(button, button.dataset.correct)
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-      nextButton.classList.remove("hide")
+      nextButton.classList.remove("hide", "correct")
   } else {
     playAgainButton.classList.remove("hide")
     resultContainer.classList.remove("hide");
@@ -206,16 +206,6 @@ function reloadGame() {
   document.body.classList.remove("correct", "wrong")
     resultContainer.classList.add("hide");
 }
-
-
-
-// METHOD FOR LETTING USERS SELECT TOPICS:
-//
-//
-// if sport button classList contains correct then add questionArray.concat(sportQuestions)
-// if histiry button classList contains.....setColor
-// questions = questionArray
-
 
 // ------------------------------------------------------------------
 // QUESTIONS ARRAY
@@ -327,6 +317,96 @@ const historyQuestions = [
 
 const sportQuestions = [
 
+  {
+    question: "In American Football, how many points do you score for a touchdown?",
+    answers: [
+      { text: "2", correct: false },
+      { text: "5", correct: false },
+      { text: "6", correct: true },
+      { text: "7", correct: false }
+    ]
+  },
+  {
+    question: "How many points did England score in the 2003 rugby world cup final?",
+    answers: [
+      { text: "18", correct: false },
+      { text: "20", correct: true },
+      { text: "26", correct: false },
+      { text: "27", correct: false }
+    ]
+  },
+  {
+    question: "The Los Angeles Lakers and New York Knicks play which sport?",
+    answers: [
+      { text: "American Football", correct: false },
+      { text: "Ice Hockey", correct: false },
+      { text: "Baseball", correct: false },
+      { text: "Basketball", correct: true }
+    ]
+  },
+  {
+    question: "Which country’s rugby team is called The Springboks?",
+    answers: [
+      { text: "South Africa", correct: true },
+      { text: "France", correct: false },
+      { text: "Australia", correct: false },
+      { text: "New Zealand", correct: false }
+    ]
+  },
+  {
+    question: "Which English football team has the nickname 'The Foxes'?",
+    answers: [
+      { text: "Everton", correct: false },
+      { text: "Leicester City", correct: true },
+      { text: "Fulham", correct: false },
+      { text: "Manchester United", correct: false }
+    ]
+  },
+  {
+    question: "How many players are there in a baseball team?",
+    answers: [
+      { text: "6", correct: false },
+      { text: "8", correct: false },
+      { text: "9", correct: true },
+      { text: "12", correct: false }
+    ]
+  },
+  {
+    question: "What colour is the 8 ball in a game of pool?",
+    answers: [
+      { text: "Yellow", correct: false },
+      { text: "Red", correct: false },
+      { text: "Black", correct: true },
+      { text: "Pink", correct: false }
+    ]
+  },
+  {
+    question: "What is the maximum score a player can receive in a game of ten pin bowling?",
+    answers: [
+      { text: "200", correct: false },
+      { text: "300", correct: true },
+      { text: "400", correct: false },
+      { text: "500", correct: false }
+    ]
+  },
+  {
+    question: "What numbers are either side of 20 on a dart board?",
+    answers: [
+      { text: "5 & 1", correct: true },
+      { text: "18 & 2", correct: false },
+      { text: "5 & 2", correct: false },
+      { text: "18 & 5", correct: false }
+    ]
+  },
+  {
+    question: "How many players are there on a volleyball team?",
+    answers: [
+      { text: "4", correct: false },
+      { text: "6", correct: true },
+      { text: "8", correct: false },
+      { text: "10", correct: false }
+    ]
+  },
 ]
 
 // ------------------------------------------------------------------
@@ -344,6 +424,88 @@ const foodAndDrinkQuestions = [
       { text: "White Rum", correct: true }
     ]
   },
+  {
+    question: "How many cups of tea are drunk in the UK on average every day?",
+    answers: [
+      { text: "35 Million", correct: false },
+      { text: "115 Million", correct: false },
+      { text: "165 Million", correct: true },
+      { text: "310 Million", correct: false }
+    ]
+  },
+  {
+    question: "What is the most consumed manufactured drink in the world?",
+    answers: [
+      { text: "Tea", correct: true },
+      { text: "Coca-Cola", correct: false },
+      { text: "Coffee", correct: false },
+      { text: "Red Bull", correct: false }
+    ]
+  },
+  {
+    question: "What is James Bonds favourite drink?",
+    answers: [
+      { text: "Mojito", correct: false },
+      { text: "Whiskey Sour", correct: false },
+      { text: "Tequila Sunrise", correct: false },
+      { text: "Vodka Martini", correct: true }
+    ]
+  },
+  {
+    question: "What is the most expensive spice in the world by weight?",
+    answers: [
+      { text: "Saffron", correct: true },
+      { text: "Paprika", correct: false },
+      { text: "Turmeric", correct: false },
+      { text: "Cinamon", correct: false }
+    ]
+  },
+  {
+    question: "Gluten is found in which cereal grain?",
+    answers: [
+      { text: "Corn", correct: false },
+      { text: "Barley", correct: false },
+      { text: "Wheat", correct: true },
+      { text: "Rye", correct: false }
+    ]
+  },
+  {
+    question: "In which country will you find wine-growing region the Yarra Valley?",
+    answers: [
+      { text: "South Africa", correct: false },
+      { text: "Australia", correct: true },
+      { text: "Argentina", correct: false },
+      { text: "Chile", correct: false }
+    ]
+  },
+  {
+    question: "How many calories are there in a glass of water?",
+    answers: [
+      { text: "0", correct: true },
+      { text: "50", correct: false },
+      { text: "100", correct: false },
+      { text: "200", correct: false }
+    ]
+  },
+  {
+    question: "What does IPA stand for?",
+    answers: [
+      { text: "Irish Pale Ale", correct: false },
+      { text: "International Pale Ale", correct: false },
+      { text: "Intensely Premium Ale", correct: false },
+      { text: "India Pale Ale", correct: true }
+    ]
+  },
+  {
+    question: "From which Spanish city does paella originate?",
+    answers: [
+      { text: "Barcelona", correct: false },
+      { text: "Madrid", correct: false },
+      { text: "Granada", correct: false },
+      { text: "Valencia", correct: true }
+    ]
+  },
+
 ]
 
 // ------------------------------------------------------------------
@@ -499,4 +661,23 @@ const generalKnowledgeQuestions = [
       { text: "22", correct: false }
     ]
   },
+  {
+    question: "What is the value of the letter 'K' in a game of scrabble?",
+    answers: [
+      { text: "3", correct: false },
+      { text: "4", correct: false },
+      { text: "5", correct: true },
+      { text: "6", correct: false }
+    ]
+  },
+  {
+      question: "In which country was the game 'mahjong' invented?",
+      answers: [
+        { text: "Japan", correct: false },
+        { text: "South Korea", correct: false },
+        { text: "Vietnam", correct: false },
+        { text: "China", correct: true }
+      ]
+    },
+
 ]
