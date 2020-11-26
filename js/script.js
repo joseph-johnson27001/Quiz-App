@@ -206,8 +206,8 @@ function reloadGame() {
     topicButtons[i].classList.remove("correct")
   }
   document.body.classList.remove("correct", "wrong")
-  resultContainer.classList.add("hide");
-  questions = [];
+  resultContainer.classList.add("hide")
+  questions = ""
 }
 
 // ------------------------------------------------------------------
