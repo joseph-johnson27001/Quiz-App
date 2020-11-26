@@ -207,7 +207,7 @@ function reloadGame() {
   }
   document.body.classList.remove("correct", "wrong")
   resultContainer.classList.add("hide");
-  questions = "";
+  questions = [];
 }
 
 // ------------------------------------------------------------------
