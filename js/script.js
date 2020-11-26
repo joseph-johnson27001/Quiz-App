@@ -17,7 +17,6 @@ const geographyButton = document.getElementById("geography-button")
 const musicButton = document.getElementById("music-button")
 const generalKnowledgeButton = document.getElementById("general-knowledge-button")
 
-
 // Container Variables:
 const questionContainerElement = document.getElementById("question-container")
 const correctAnswersContainer = document.getElementById("correct-answers-container")
@@ -62,7 +61,10 @@ document.querySelectorAll('button').forEach(function(e){
 })
 
 function setColor() {
-  if(this.classList.contains("correct")) {
+  if(this.classList.contains("start-btn") && (!questions)) {
+    return
+  }
+  else if(this.classList.contains("correct")) {
     this.classList.remove("correct")
   }
    else {
@@ -204,7 +206,8 @@ function reloadGame() {
     topicButtons[i].classList.remove("correct")
   }
   document.body.classList.remove("correct", "wrong")
-    resultContainer.classList.add("hide");
+  resultContainer.classList.add("hide");
+  questions = "";
 }
 
 // ------------------------------------------------------------------
