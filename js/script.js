@@ -818,6 +818,87 @@ const musicQuestions = [
       { text: "Thin Lizzy", correct: false }
     ]
   },
+  {
+    question: "What instrument did Phil Collins play when he was a member of Genesis?",
+    answers: [
+      { text: "Guitar", correct: false },
+      { text: "Drums", correct: true },
+      { text: "Bass", correct: false },
+      { text: "Keyboard", correct: false }
+    ]
+  },
+  {
+    question: "Which female artist released the single 'Rolling in the Deep'?",
+    answers: [
+      { text: "Taylor Swift", correct: false },
+      { text: "Madonna", correct: false },
+      { text: "Adele", correct: true },
+      { text: "Kylie Minogue", correct: false }
+    ]
+  },
+  {
+    question: "In which year of the nineties did Nirvana frontman Kurt Cobain die?",
+    answers: [
+      { text: "1999", correct: false },
+      { text: "1998", correct: false },
+      { text: "1996", correct: false },
+      { text: "1994", correct: true }
+    ]
+  },
+  {
+    question: "Eurovision sensation ABBA came from which country?",
+    answers: [
+      { text: "Sweden", correct: true },
+      { text: "Finland", correct: false },
+      { text: "Denmark", correct: false },
+      { text: "Ireland", correct: false }
+    ]
+  },
+  {
+    question: "Which famous film star danced (and flew) in the video to Fatboy Slim’s 2001 track Weapon of choice?",
+    answers: [
+      { text: "John Travolta", correct: false },
+      { text: "Christopher Walken", correct: true },
+      { text: "Tom Cruise", correct: false },
+      { text: "Bruce Willis", correct: false }
+    ]
+  },
+  {
+    question: "David Bowie appeared in what cult film in 1986?",
+    answers: [
+      { text: "Back To The Future", correct: false },
+      { text: "The Never Ending Story", correct: false },
+      { text: "Labyrinth", correct: true },
+      { text: "Top Gun", correct: false }
+    ]
+  },
+  {
+    question: "What instrument does Vanessa Carlton play in the music video to 'A Thousand Miles'?",
+    answers: [
+      { text: "Guitar", correct: false },
+      { text: "The Drums", correct: false },
+      { text: "Triangle", correct: false },
+      { text: "Piano", correct: true }
+    ]
+  },
+  {
+    question: "'In the End' was a year 2000 track for which band?",
+    answers: [
+      { text: "Linkin Park", correct: true },
+      { text: "Blink -182", correct: false },
+      { text: "Limp Bizkit", correct: false },
+      { text: "Greenday", correct: false }
+    ]
+  },
+  {
+    question: "How many number one singles did Oasis have?",
+    answers: [
+      { text: "4", correct: false },
+      { text: "8", correct: true },
+      { text: "12", correct: false },
+      { text: "16", correct: false }
+    ]
+  },
 ]
 
 // ------------------------------------------------------------------
