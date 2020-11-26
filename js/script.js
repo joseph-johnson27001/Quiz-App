@@ -208,7 +208,7 @@ function reloadGame() {
 }
 
 // ------------------------------------------------------------------
-// QUESTIONS ARRAY
+// QUESTIONS ARRAYS
 // ------------------------------------------------------------------
 
 
@@ -580,10 +580,10 @@ const moviesAndTelevisionQuestions = [
   {
     question: "In 'The Simpsons' what does Bart always do during the opening credits?",
     answers: [
-      { text: "Write on the school blackboard", correct: true },
-      { text: "Drive Marge's car", correct: false },
-      { text: "Play a prank on Homer", correct: false },
-      { text: "Eat a Krusty burger", correct: false }
+      { text: "Drive Marge's Car", correct: false },
+      { text: "Writes On The School Blackboard", correct: true },
+      { text: "Play A Prank On Homer", correct: false },
+      { text: "Eats A Krusty Burger", correct: false }
     ]
   },
   {
@@ -611,7 +611,99 @@ const moviesAndTelevisionQuestions = [
 // SCIENCE QUESTIONS
 // ------------------------------------------------------------------
 
-const scienceQuestions = []
+const scienceQuestions = [
+
+  {
+    question: "Roughly, how long does it take for the suns light to reach earth?",
+    answers: [
+      { text: "8 Minutes", correct: true },
+      { text: "8 Hours", correct: false },
+      { text: "8 Days", correct: false },
+      { text: "8 Weeks", correct: false }
+    ]
+  },
+  {
+    question: "At what temperature are Celsius and Farenheit equal?",
+    answers: [
+      { text: "40 degrees", correct: false },
+      { text: "0 degrees", correct: false },
+      { text: "-20 degrees", correct: false },
+      { text: "-40 degrees", correct: true }
+    ]
+  },
+  {
+    question: "What is the biggest planet in our Solar System?",
+    answers: [
+      { text: "Saturn", correct: false },
+      { text: "Mars", correct: false },
+      { text: "Jupiter", correct: true },
+      { text: "Neptune", correct: false }
+    ]
+  },
+  {
+    question: "On the periodic table, what symbol stands for silver?",
+    answers: [
+      { text: "Si", correct: false },
+      { text: "Ag", correct: true },
+      { text: "Sl", correct: false },
+      { text: "Au", correct: false }
+    ]
+  },
+  {
+    question: "Which two planets lack moons?",
+    answers: [
+      { text: "Mercury & Venus", correct: true },
+      { text: "Earth & Mars", correct: false },
+      { text: "Jupiter & Saturn", correct: false },
+      { text: "Uranus & Neptune", correct: false }
+    ]
+  },
+  {
+    question: "What is the collective name for a group of crows?",
+    answers: [
+      { text: "A Congregation", correct: false },
+      { text: "A Murder", correct: true },
+      { text: "A Gang", correct: false },
+      { text: "A Caravan", correct: false }
+    ]
+  },
+  {
+    question: "What type of sugar does the brain need for energy?",
+    answers: [
+      { text: "Fructose", correct: false },
+      { text: "Sucrose", correct: false },
+      { text: "Glucose", correct: true },
+      { text: "Aspartame", correct: false }
+    ]
+  },
+  {
+    question: "Out of the seven colours of the rainbow, which one is in the middle?",
+    answers: [
+      { text: "Red", correct: false },
+      { text: "Violet", correct: false },
+      { text: "Yellow", correct: false },
+      { text: "Green", correct: true }
+    ]
+  },
+  {
+    question: "For which animal is the Latin word lupine used?",
+    answers: [
+      { text: "Wolf", correct: true },
+      { text: "Parrot", correct: false },
+      { text: "Shark", correct: false },
+      { text: "Tiger", correct: false }
+    ]
+  },
+  {
+    question: "What is table salt's chemical name?",
+    answers: [
+      { text: "Sodium Hydroxide", correct: false },
+      { text: "Sodium Chloride", correct: true },
+      { text: "Carbon Hydroxide", correct: false },
+      { text: "Carbon Dioxide", correct: false }
+    ]
+  },
+]
 
 // ------------------------------------------------------------------
 // GEOGRAPHY QUESTIONS
