@@ -926,13 +926,75 @@ const generalKnowledgeQuestions = [
     ]
   },
   {
-      question: "In which country was the game 'mahjong' invented?",
-      answers: [
-        { text: "Japan", correct: false },
-        { text: "South Korea", correct: false },
-        { text: "Vietnam", correct: false },
-        { text: "China", correct: true }
-      ]
-    },
-
+    question: "In which country was the game 'Mahjong' invented?",
+    answers: [
+      { text: "Japan", correct: false },
+      { text: "South Korea", correct: false },
+      { text: "Vietnam", correct: false },
+      { text: "China", correct: true }
+    ]
+  },
+  {
+    question: "Who painted the 'Mona Lisa'?",
+    answers: [
+      { text: "Claude Monet", correct: false },
+      { text: "Leonardo Da Vinci", correct: true },
+      { text: "Pablo Picasso", correct: false },
+      { text: "Vincent Van Gogh", correct: false }
+    ]
+  },
+  {
+    question: "In which franchise would you find the character Katniss Everdeen?",
+    answers: [
+      { text: "The Hunger Games", correct: true },
+      { text: "The Maze Runner", correct: false },
+      { text: "Twilight", correct: false },
+      { text: "Lord of the Rings", correct: false }
+    ]
+  },
+  {
+    question: "How many minutes in a game of rugby league?",
+    answers: [
+      { text: "80", correct: true },
+      { text: "90", correct: false },
+      { text: "100", correct: false },
+      { text: "120", correct: false }
+    ]
+  },
+  {
+    question: "In which decade was Heinz established?",
+    answers: [
+      { text: "1820s", correct: false },
+      { text: "1860s", correct: true },
+      { text: "1900s", correct: false },
+      { text: "1920s", correct: false }
+    ]
+  },
+  {
+    question: "Which of these Tom Hanks films was released first?",
+    answers: [
+      { text: "Catch Me If You Can", correct: false },
+      { text: "The Terminal", correct: false },
+      { text: "Apollo 13", correct: false },
+      { text: "Forest Gump", correct: true }
+    ]
+  },
+  {
+    question: "What is the smallest country in the world?",
+    answers: [
+      { text: "San Marino", correct: false },
+      { text: "Monaco", correct: false },
+      { text: "Vatican City", correct: true },
+      { text: "Luxembourg", correct: false }
+    ]
+  },
+  {
+    question: "Which country in the world is believed to have the most miles of motorway?",
+    answers: [
+      { text: "China", correct: true },
+      { text: "U.S.A", correct: false },
+      { text: "Russia", correct: false },
+      { text: "Japan", correct: false }
+    ]
+  },
 ]
